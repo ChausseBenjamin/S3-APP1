@@ -158,7 +158,7 @@
 \draw[umlcd style dashed line,->] (Facture) -- (Menu);
 \draw[umlcd style dashed line,->] (Menu) -- (PlatAuMenu);
 \draw[umlcd style dashed line,->] (Facture) -- (PlatChoisi);
-\draw[umlcd style, -{Diamond[open]}] (Client) -- (Facture);
+\draw[umlcd style,thick, -{Diamond[open]}] (Client) -- (Facture);
 \draw[umlcd style dashed line,->] (Facture) --node[above,sloped,black]{$<<$throws$>>$} (FactureException);
 \draw[umlcd style dashed line,->] (Menu) --node[above,sloped,black]{$<<$throws$>>$} (MenuException);
 \end{tikzpicture}
