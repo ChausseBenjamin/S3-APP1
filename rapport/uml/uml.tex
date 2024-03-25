@@ -62,7 +62,7 @@
   % Dotted arrow coming from PlatChoisi:
 \end{class}
 
-\begin{class}[text width=6cm]{PlatEnfant}{-5,-15}
+\begin{class}[text width=6cm]{PlatEnfant}{-7.5,-7.5}
   \inherit{PlatAuMenu}
   \attribute{-proportion: double}
   \operation{+PlatEnfant()}
@@ -71,7 +71,7 @@
   \operation{+toString(): String}
 \end{class}
 
-\begin{class}[text width=6.5cm]{PlatSante}{2,-15}
+\begin{class}[text width=6.5cm]{PlatSante}{-14.5,-2}
   \inherit{PlatAuMenu}
   \attribute{-kcal: double}
   \attribute{-chol: double}
@@ -87,6 +87,10 @@
   \operation{toString(): String}
 \end{class}
 
+\begin{class}{PlatFactory}{-8,-14}
+\end{class}
+
+
 \end{package} % end of package "Plats"
 
 \begin{package}{facture}
@@ -100,7 +104,7 @@
   \attribute{PAYEE}
 \end{class}
 
-\begin{class}{Facture}{11,-4}
+\begin{class}[text width=6cm]{Facture}{11,-4}
   \attribute{-date: Date}
   \attribute{-description: String}
   \attribute{-etat: FactureEtat}
@@ -152,6 +156,11 @@
 
 \end{package} % end of package "menuFact"
 
+
+% PlatFactory:
+\draw[umlcd style dashed line,->] (PlatFactory) -- (PlatAuMenu);
+\draw[umlcd style dashed line,->] (PlatFactory) -- (PlatEnfant);
+\draw[umlcd style dashed line,->] (PlatFactory) -- (PlatSante);
 
 \draw[umlcd style dashed line,->] (PlatChoisi) -- (PlatAuMenu);
 \draw[umlcd style dashed line,->]  (Facture) -- (FactureEtat);
